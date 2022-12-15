@@ -12,10 +12,8 @@ import AuthStack from "./src/navigation/stacks/AuthStack"
 import MainStack from "./src/navigation/stacks/MainStack"
 
 const RootNavigator = () => {
-  const { isOnboard } = useContext(OnboardingContext);
+  const { isOnboard, isLoading } = useContext(OnboardingContext);
   const { token } = useContext(AuthContext)
-  const [isLoading, setLoading] = useState(true);
-  useEffect(() => { setTimeout(() => setLoading(false), 3000) });
   return (
     <>
       <NavigationContainer>
