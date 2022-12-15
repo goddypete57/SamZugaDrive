@@ -2,7 +2,7 @@ import * as React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import authRouts from '../route/authRoute';
 import Login from '../../../src/screens/auth/Login';
-import OnboardingScreen from '../../../src/screens/auth/OnboardScreen';
+import OnboardingScreen from '../../screens/splash/OnboardScreen';
 import VerifyOtp from '../../screens/auth/VerifyOtp';
 // import verifyOtp from '../../screens/auth/verifyOtp';
 
