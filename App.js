@@ -7,7 +7,7 @@ import Splash from "./src/screens/splash/Splash";
 import { OnboardingContext } from "./context/OnboardingContext.js";
 import { AuthContext, AuthContextProvider } from "./context/AuthContext.js";
 import { OnboardingContextProvider } from "./context/OnboardingContext.js";
-import OnboardingScene from "./src/screens/onboarding/OnboardingScene";
+import OnboardingScene from "./src/screens/splash/OnboardScreen";
 import AuthStack from "./src/navigation/stacks/AuthStack"
 import MainStack from "./src/navigation/stacks/MainStack"
 
