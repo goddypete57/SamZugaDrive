@@ -1,8 +1,26 @@
-import React from "react";
-import { View, Text, StyleSheet, Image, } from "react-native";
+import React, { useEffect } from "react";
+import { View, Text, StyleSheet, Image, Platform } from "react-native";
 
 
 export default Splash = () => {
+    useEffect(() => {
+        setTimeout(async () => {
+            if(Platform.OS === 'android') {
+                try {
+                    const granted = await PermissionsAndroid.request(
+                        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
+                    )
+                    if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+                        alert("You can use the location")
+                    } else {
+                        alert("Location permission denied")
+                    }
+                } catch (err) {
+                    console.warn(err)
+                }
+            }
+        }, 3000);
+    }, []);
     return (
         <View style={styles.container}>
             {/* <Image style={styles.logo} source={require("../assets/logo.png")} /> */}
