@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { View, Text, StyleSheet, Image, Platform } from "react-native";
-import { OnboardingContext } from "./context/OnboardingContext.js";
+import { OnboardingContext } from "../../../context/OnboardingContext.js";
 
 
 export default Splash = () => {
