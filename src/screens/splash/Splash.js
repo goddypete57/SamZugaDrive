@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { View, Text, StyleSheet, Image, Platform } from "react-native";
+import { OnboardingContext } from "./context/OnboardingContext.js";
 
 
 export default Splash = () => {
+    const {setLoading} = useContext(OnboardingContext);
     useEffect(() => {
         setTimeout(async () => {
             if(Platform.OS === 'android') {
@@ -11,6 +13,7 @@ export default Splash = () => {
                         PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
                     )
                     if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+                        setLoading(true);
                         alert("You can use the location")
                     } else {
                         alert("Location permission denied")
