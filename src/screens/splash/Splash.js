@@ -26,8 +26,9 @@ export default Splash = () => {
     }, []);
     return (
         <View style={styles.container}>
-            {/* <Image style={styles.logo} source={require("../assets/logo.png")} /> */}
-            <Text style={styles.text}>Loading...</Text>
+            <Image style={{
+                resizeMode: "contain",
+            }} source={require("../../../assets/images/splash.png")} />
         </View>
     );
 }
