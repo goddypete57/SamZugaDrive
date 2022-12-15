@@ -1,22 +1,21 @@
-import React, { useEffect } from "react";
-import { View, Text, StyleSheet, Image, Platform } from "react-native";
+import React, { useEffect, useContext } from "react";
+import { View, Text, StyleSheet, Image, Platform, PermissionsAndroid, BackHandler } from "react-native";
 import { OnboardingContext } from "../../../context/OnboardingContext.js";
 
 
 export default Splash = () => {
-    const {setLoading} = useContext(OnboardingContext);
+    const { setLoading } = useContext(OnboardingContext);
     useEffect(() => {
         setTimeout(async () => {
-            if(Platform.OS === 'android') {
+            if (Platform.OS === 'android') {
                 try {
                     const granted = await PermissionsAndroid.request(
                         PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
                     )
                     if (granted === PermissionsAndroid.RESULTS.GRANTED) {
                         setLoading(true);
-                        alert("You can use the location")
                     } else {
-                        alert("Location permission denied")
+                        BackHandler.exitApp()
                     }
                 } catch (err) {
                     console.warn(err)
@@ -27,7 +26,9 @@ export default Splash = () => {
     return (
         <View style={styles.container}>
             <Image style={{
-                resizeMode: "contain",
+                resizeMode: "cover",
+                width: "100%",
+                height: "100%",
             }} source={require("../../../assets/images/splash.png")} />
         </View>
     );
