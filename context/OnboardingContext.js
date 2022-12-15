@@ -6,6 +6,7 @@ export const OnboardingContext = createContext();
 
 export const OnboardingContextProvider = ({children}) => {
     const [isOnboard, setOnboard] = useState(false);
+    const [isLoading, setLoading] = useState(true);
 
     const onboardingDone = () => {
         setOnboard(true);
@@ -25,7 +26,7 @@ export const OnboardingContextProvider = ({children}) => {
         isOnboarded();
     }, []);
     return (
-        <OnboardingContext.Provider value={{ isOnboard, onboardingDone}}>
+        <OnboardingContext.Provider value={{ isOnboard, onboardingDone, isLoading, setLoading}}>
             {children}
         </OnboardingContext.Provider>
     );
