@@ -1,0 +1,25 @@
+const colors = {
+  primary: '#3C4890',
+  white: '#FFFFFF',
+  black: '#000000',
+  inactiveText: '#BCBCBC',
+  inactiveColor: '#F5F5F5',
+  inactive2: '#6B6B6B',
+  borderInactive: '#CCCCCC',
+  borderActive: '#8C8C8C',
+  buttonInactive: '#7D85B5',
+  success: '#00875A',
+  error: '#DE350B',
+  tabInctive: '#ABABAB',
+  deepBlue: '#1C2B56',
+  brown: '#8F3F6F',
+  textGray: '#7C7C7C',
+  tabInactive: '#F4F6FF',
+  textGray2: '#5C5C5C',
+  textGray3: '#D9D9D9',
+  textGray4: '#898989',
+  cardBackground: '#FAFBFF',
+  blackVariant: '#303030',
+};
+
+export default colors;
