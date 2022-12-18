@@ -1,7 +1,8 @@
 const authRoute = {
-    onbordingScreen:'OnbordingScreen',
+
     login:'Login',
     singUp:'SignUP',
+    emailRegistration:'emailRegistration',
     verifyOtp:'VerifyOtp',
 };
 

@@ -7,7 +7,7 @@ import Splash from "./src/screens/splash/Splash";
 import { OnboardingContext } from "./context/OnboardingContext.js";
 import { AuthContext, AuthContextProvider } from "./context/AuthContext.js";
 import { OnboardingContextProvider } from "./context/OnboardingContext.js";
-import OnboardingScene from "./src/screens/splash/OnboardScreen";
+import EmailRegistration from "./src/screens/auth/EmailRegistration";
 import AuthStack from "./src/navigation/stacks/AuthStack"
 import MainStack from "./src/navigation/stacks/MainStack"
 
@@ -20,7 +20,7 @@ const RootNavigator = () => {
         {
           isLoading ? <Splash /> :
             isOnboard ? token != null ? <MainStack /> :
-              <AuthStack /> : <OnboardingScene />}
+              <AuthStack /> : <EmailRegistration />}
       </NavigationContainer>
       <Toast />
     </>
