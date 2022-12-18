@@ -22,6 +22,9 @@ header:{
     fontFamily:'Urbanist-Bold', 
     fontSize:30,
     textAlign:'left',
-    color:colors.black
+    color:colors.black,
+    marginTop:80
+
 },
+
 })
