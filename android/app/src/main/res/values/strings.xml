@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SamZugaDrive</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCaTVs4mAldtKZN_6XO955UjlCWWc45ZOs</string>
+
 </resources>
