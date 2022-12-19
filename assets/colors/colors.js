@@ -8,7 +8,9 @@ const colors = {
   buttonInactive: '#F7F8F9',
   success: '#00875A',
   error: '#DE350B',
-  border:'#E8ECF4'
+  border:'#E8ECF4',
+  Blue:'#3E2EF2',
+  Lightgreen:'#35C2C1'
  
 };
 
