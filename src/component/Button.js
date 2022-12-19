@@ -9,7 +9,7 @@ export default Button = ({ title, onPress, buttonStyle, enabled, textColor, butt
             style={[buttonStyle,
                 StyleSheet.create({
                     justifyContent: 'center',
-                    backgroundColor: !processing && enabled ? buttonColor ? buttonColor : colors.primary : colors.inactive
+                    backgroundColor: !processing && enabled ? buttonColor ? buttonColor : colors.Blue : colors.Blue
                 })]}>
 
             <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
