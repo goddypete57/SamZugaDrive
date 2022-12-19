@@ -1,0 +1,29 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/Fonts/Urbanist-Bold.ttf",
+      "sha1": "b25f6f60c22feaf33ec829c7ae6bb086af2f4d9e"
+    },
+    {
+      "path": "assets/Fonts/Urbanist-ExtraBold.ttf",
+      "sha1": "4349fd2723b54c7ddb39455af90f4fbaaae4700c"
+    },
+    {
+      "path": "assets/Fonts/Urbanist-Light.ttf",
+      "sha1": "19bb34834335dad3c8b3a74f1f700c6e3cafebce"
+    },
+    {
+      "path": "assets/Fonts/Urbanist-Medium.ttf",
+      "sha1": "da11e2077535e358e004b439591d701f710918d2"
+    },
+    {
+      "path": "assets/Fonts/Urbanist-Regular.ttf",
+      "sha1": "12ec7ea7813fc67247fbae7b8290b61b1559ec25"
+    },
+    {
+      "path": "assets/Fonts/Urbanist-SemiBold.ttf",
+      "sha1": "b5d08f8959820a3797d083cdf84e0e7304f85dc4"
+    }
+  ]
+}

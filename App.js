@@ -1,21 +1,41 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import React, { useState, useEffect, useContext } from "react";
+import { View, Text, StyleSheet, Image, StatusBar } from "react-native";
+import { NavigationContainer } from '@react-navigation/native';
+import Toast from 'react-native-toast-message';
 
-import React from 'react';
-import {
-  Text,
-  View,
-} from 'react-native';
+import Splash from "./src/screens/splash/Splash";
+import { OnboardingContext } from "./context/OnboardingContext.js";
+import { AuthContext, AuthContextProvider } from "./context/AuthContext.js";
+import { OnboardingContextProvider } from "./context/OnboardingContext.js";
+import EmailRegistration from "./src/screens/auth/EmailRegistration";
+import AuthStack from "./src/navigation/stacks/AuthStack"
+import MainStack from "./src/navigation/stacks/MainStack"
 
-export default App =() =>{
-  return(
-    <View>
-      <Text>Hello world</Text>
-    </View>
+const RootNavigator = () => {
+  const { isOnboard, isLoading } = useContext(OnboardingContext);
+  const { token } = useContext(AuthContext)
+  return (
+    <>
+      <NavigationContainer>
+        {
+          isLoading ? <Splash /> :
+            isOnboard ? token != null ? <MainStack /> :
+              <AuthStack /> : <EmailRegistration />}
+      </NavigationContainer>
+      <Toast />
+    </>
   )
+}
+export default function App() {
+  if (Platform.OS == 'ios') {
+    StatusBar.setBarStyle('light-content', true);	//<<--- add this
+  }
+  return (
+    <OnboardingContextProvider>
+      <StatusBar backgroundColor={"#000"} />
+      <AuthContextProvider>
+        <RootNavigator />
+      </AuthContextProvider>
+    </OnboardingContextProvider>
+  );
 }
