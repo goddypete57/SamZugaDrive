@@ -1,10 +1,11 @@
 import React, {useContext, useState} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, KeyboardAvoidingView} from 'react-native';
 import colors from '../../../assets/colors/colors';
-
-import OtpFields from "../../component/OtpFields";
-
+import Button from '../../component/Button';
+import OtpFields from '../../component/OtpFields';
 export default VerifyOtp = ({navigation}) => {
+  const [otp, setOtp] = useState('');
+  const canProceed = otp.length == 4;
   return (
     <View style={styles.container}>
       <View style={styles.headerWrapper}>
@@ -14,6 +15,40 @@ export default VerifyOtp = ({navigation}) => {
         </Text>
       </View>
 
+      <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        style={styles.inputWrapper}>
+        <OtpFields
+          style={styles.otp}
+          nuberOfFields={4}
+          value={otp}
+          onChangeText={text => {
+            setOtp(text);
+            if (text.length == 4) {
+              // verify(text);
+            }
+          }}
+        />
+      </KeyboardAvoidingView>
+
+      <Button
+        title={'Verify'}
+        onPress={() => {
+          loginUser();
+        }}
+        buttonStyle={styles.createAccountButton}
+        enabled={canProceed}
+        buttonColor={{backgroundColor: colors.Blue}}
+        fontSize={16}
+      />
+      <View style={styles.loginwrapper}>
+        <Text style={styles.lastText}>
+        Didn’t received code?
+          <Text onpress={()=>{}} style={styles.login}>
+          Resend
+          </Text>
+        </Text>
+      </View>
     </View>
   );
 };
@@ -29,5 +64,24 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     color: colors.black,
   },
-  subText: {},
+  subText: {
+    fontFamily: 'Urbanist-Medium',
+    fontSize: 16,
+  },
+  createAccountButton: {
+    borderRadius: 16,
+    height: 54,
+    marginTop: 149,
+
+    backgroundColor: colors.Blue,
+    marginHorizontal: 20,
+  },
+  login:{
+    fontSize:15,
+    fontFamily: 'Urbanist-Bold',
+    color:colors.Lightgreen,
+    textAlign: 'center',
+    marginTop:20
+  },
+  loginwrapper:{alignSelf:'center', marginTop: 24,}
 });

@@ -16,7 +16,7 @@ export default Button = ({ title, onPress, buttonStyle, enabled, textColor, butt
                 <Text style={StyleSheet.create({
                     fontSize: fontSize ? fontSize : 16,
                     textAlign: 'center',
-                    fontFamily: "PlusJakartaSans-Regular",
+                    fontFamily: "Urbanist-Bold",
                     color: textColor ? textColor : colors.white,
                 })}>{title}</Text>
 
