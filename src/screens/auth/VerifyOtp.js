@@ -1,8 +1,9 @@
 import React, {useContext, useState} from 'react';
-import {View, Text, StyleSheet, KeyboardAvoidingView} from 'react-native';
+import {View, Text, StyleSheet, KeyboardAvoidingView, TouchableOpacity} from 'react-native';
 import colors from '../../../assets/colors/colors';
 import Button from '../../component/Button';
 import OtpFields from '../../component/OtpFields';
+import authRoute from '../../navigation/route/authRoute';
 export default VerifyOtp = ({navigation}) => {
   const [otp, setOtp] = useState('');
   const canProceed = otp.length == 4;
@@ -11,7 +12,7 @@ export default VerifyOtp = ({navigation}) => {
       <View style={styles.headerWrapper}>
         <Text style={styles.header}>OTP Verification</Text>
         <Text style={styles.subText}>
-          Enter the verification code we just sent on {'\n'}your email address.
+          Enter the verification code we just sent to {'\n'}your email address.
         </Text>
       </View>
 

@@ -6,12 +6,19 @@ import Login from '../../../src/screens/auth/Login';
 import VerifyOtp from '../../screens/auth/VerifyOtp';
 // import verifyOtp from '../../screens/auth/verifyOtp';
 import EmailRegistration from '../../screens/auth/EmailRegistration';
+import MapItemComponent from '../../component/MapItemComponent';
 
 const Stack = createNativeStackNavigator();
 
 export default AuthStack = () => {
   return (
     <Stack.Navigator>
+
+<Stack.Screen
+        name={authRouts.mapItemComponent}
+        component={MapItemComponent}
+        options={{ headerShown: false }}
+      />
 
       <Stack.Screen
         name={authRouts.verifyOtp}

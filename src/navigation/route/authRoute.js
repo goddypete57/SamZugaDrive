@@ -4,6 +4,7 @@ const authRoute = {
     singUp:'SignUP',
     emailRegistration:'emailRegistration',
     verifyOtp:'VerifyOtp',
+    mapItemComponent: 'MapItemComponent'
 };
 
 export default authRoute;

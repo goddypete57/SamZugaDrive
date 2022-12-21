@@ -10,6 +10,7 @@ import { OnboardingContextProvider } from "./context/OnboardingContext.js";
 import VerifyOtp from "./src/screens/auth/VerifyOtp";
 import AuthStack from "./src/navigation/stacks/AuthStack"
 import MainStack from "./src/navigation/stacks/MainStack"
+import MapItemComponent from "./src/component/MapItemComponent";
 
 const RootNavigator = () => {
   const { isOnboard, isLoading } = useContext(OnboardingContext);
@@ -20,7 +21,7 @@ const RootNavigator = () => {
         {
           isLoading ? <Splash /> :
             isOnboard ? token != null ? <MainStack /> :
-              <AuthStack /> : <VerifyOtp />}
+              <AuthStack /> : <VerifyOtp/>}
       </NavigationContainer>
       <Toast />
     </>
