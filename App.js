@@ -11,6 +11,7 @@ import VerifyOtp from "./src/screens/auth/VerifyOtp";
 import AuthStack from "./src/navigation/stacks/AuthStack"
 import MainStack from "./src/navigation/stacks/MainStack"
 import Registration from "./src/screens/auth/Registration";
+import Home from "./src/screens/home/Home";
 
 const RootNavigator = () => {
   const { isOnboard, isLoading } = useContext(OnboardingContext);
@@ -21,7 +22,7 @@ const RootNavigator = () => {
         {
           isLoading ? <Splash /> :
             isOnboard ? token != null ? <MainStack /> :
-              <AuthStack /> : <Registration />}
+              <AuthStack /> : <Home />}
       </NavigationContainer>
       <Toast />
     </>

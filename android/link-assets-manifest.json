@@ -2,6 +2,30 @@
   "migIndex": 1,
   "data": [
     {
+      "path": "assets/Fonts/Profile.js",
+      "sha1": "54476ba3a2399bd8af1061de460b9fc7913d761a"
+    },
+    {
+      "path": "assets/Fonts/Quicksand-Bold.ttf",
+      "sha1": "8727a6ae26c6646a7f25bfe6560e19c9265ea87c"
+    },
+    {
+      "path": "assets/Fonts/Quicksand-Light.ttf",
+      "sha1": "739d87992cf1cd96cff0c9c32e40927385a38146"
+    },
+    {
+      "path": "assets/Fonts/Quicksand-Medium.ttf",
+      "sha1": "48d202c7a215914264064dc27f6a8cd77ebe3036"
+    },
+    {
+      "path": "assets/Fonts/Quicksand-Regular.ttf",
+      "sha1": "6eebfcb02f142c6e2bf58f7fcb31f10ec914a0ed"
+    },
+    {
+      "path": "assets/Fonts/Quicksand-SemiBold.ttf",
+      "sha1": "43fdbf795bb0b7cc5b0d3dbcbdef0cdec0f29ca9"
+    },
+    {
       "path": "assets/Fonts/Urbanist-Bold.ttf",
       "sha1": "b25f6f60c22feaf33ec829c7ae6bb086af2f4d9e"
     },

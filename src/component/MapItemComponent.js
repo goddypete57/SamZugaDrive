@@ -22,15 +22,15 @@ export default MapItemComponent = () =>{
 }
 
 const styles = StyleSheet.create({
-    container: {
-      ...StyleSheet.absoluteFillObject,
-      justifyContent: "flex-end",
-      alignItems: "center",
-    },
-    map: {
-      ...StyleSheet.absoluteFillObject,
-    },
-  });
-
+  container: {
+    ...StyleSheet.absoluteFillObject,
+    justifyContent: "flex-end",
+    alignItems: "center",
+    flexDirection: 'column'
+  },
+  map: {
+    ...StyleSheet.absoluteFillObject,
+  },
+});
 
 
